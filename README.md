@@ -10,17 +10,19 @@
         dont shock yourself
     </div><br/>
 
-<h2>Driver Installation</h2>
+<h2>Installations</h2>
     <div>
-        <div>
-            To implement this system for yourself, you must first install a 
-                <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads"> VCP Driver
-                </a> 
-            for device operation over a virtual COM port. 
-        </div></br>
-        <div>
-            Next, you must install the correct virtual COM corresponding to your choice of board within the Arduino IDE (in our case, ESP32).
-        </div>
+        <ol>
+            <li>
+                To implement this system for yourself, you must first install a 
+                    <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads"> VCP Driver
+                    </a> 
+                for device operation over a virtual COM port. 
+            </li></br>
+            <li><div>
+                Next, you must install the correct virtual COM corresponding to your choice of board within the Arduino IDE (in our case, ESP32).
+            </div></li>
+        </ol>
     </div></br>
 
 <h2>Future Directions</h2>
