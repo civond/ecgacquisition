@@ -33,7 +33,7 @@
 <h2>Contributors</h2>
 <ul>
     <li>Nanzhong Deng</li>
-    <li>Neil Sequira</li>
+    <li>Neil Sequeira</li>
     <li>Lokesh Sharma</li>
     <li>Dorian Yeh</li>
 </ul>
