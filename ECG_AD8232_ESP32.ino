@@ -1,15 +1,15 @@
 //BE-GY 6503 Final Project: Realtime ECG Acquisition (AD8232 - ESP32) 
 
 //Parameters
-const int lo1 = 3; //D16
-const int lo2 = 2; //D4
+const int lo1 = 16; //D16
+const int lo2 = 4; //D4
 
 int lo1_state=0;
 int lo2_state=0;
 
-int output = A0; //D2 or D4
+int output = 36; //D2 or D4
 
-int freq = 5; //data collection frequency ~x milliseconds
+int freq = 50; //data collection frequency ~x milliseconds
 int baud = 9600; //baud rate
 int data;
 
@@ -29,8 +29,8 @@ void loop() {
   }
   else{
     // send the value of analog input 0:
-      Serial.println(analogRead(output));
-      data = analogRead(output);
+    data = analogRead(output);
+    Serial.println(data);
   }
   //Wait for a bit to keep serial data from saturating
   delay(freq); // adjust this
