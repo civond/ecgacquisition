@@ -2,12 +2,26 @@
 
 <h2>Overview</h2>
     <div width="100">
-        In this project, we developed a compact realtime ECG monitoring device using the AD8232 ECG module by Sparkfun and ESP32 chip mounted on a breadboard.
+        In this project, we developed a low-cost realtime ECG monitoring solution using the AD8232 ECG module by Sparkfun and ESP32 chip.
     </div><br/>
 
+<h2>Materials Needed</h2>
+<ul>
+    <li>Sparkfun AD8232 ECG Module</li>
+    <li>ESP-32 Chip</li>
+    <li>ECG leads + electrodes</li>
+    <li>USB connector</li>
+
+</ul>
 <h2>Usage</h2>
     <div>
-        dont shock yourself
+    <ol>
+        <li>Place electrodes / lead connections on a subject in a suitable configuration. </li>
+        <li>Connect the lead wire to the AD8232 ECG module,</li> 
+        <li>Upload Arduino code to the ESP32 using the Arduino IDE (the ECG signal should be collecting once this is finished, you may open the serial monitor/plotter to confirm).</li>
+        <li>Make sure that serial monitor/plotter in Arduino is closed and run the Python script.</li>
+        <li>Once data collection is sufficient, perform keyboard interuption in Python (ctrl+c), which will stop the loop and write sensor data to a .csv file. </li>
+    </ol>
     </div><br/>
 
 <h2>Installations</h2>
@@ -18,7 +32,7 @@
                     <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads"> VCP Driver
                     </a> 
                 for device operation over a virtual COM port. 
-            </li></br>
+            </li>
             <li><div>
                 Next, you must install the correct virtual COM corresponding to your choice of board within the Arduino IDE (in our case, ESP32).
             </div></li>
@@ -27,7 +41,11 @@
 
 <h2>Future Directions</h2>
     <div>
-        d
+        <ul>
+        <li>Real-time filter functionality.</li>
+        <li>Different choice of board.</li>
+        <li>Dedicated housing for electronic components.</li>
+        </ul>
     </div></br>
 
 <h2>Contributors</h2>

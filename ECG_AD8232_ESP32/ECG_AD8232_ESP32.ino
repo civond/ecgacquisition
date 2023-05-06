@@ -9,7 +9,7 @@ int lo2_state=0;
 
 int output = 36; //D2 or D4
 
-int freq = 50; //data collection frequency ~x milliseconds
+int freq = 5; //data collection frequency ~x milliseconds
 int baud = 9600; //baud rate
 int data;
 
@@ -24,6 +24,7 @@ void setup() {
 }
 
 void loop() {
+  
   if((lo1_state == 1)||(lo2_state == 1)){
     Serial.println('!');
   }
