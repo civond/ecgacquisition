@@ -2,7 +2,8 @@
 
 <h2>Overview</h2>
     <div width="100">
-        In this project, we developed a low-cost realtime ECG monitoring solution using the AD8232 ECG module by Sparkfun and ESP32 chip.
+        In this project, we developed an open-source, low-cost realtime ECG monitoring solution using the AD8232 ECG module by Sparkfun and ESP32 chip using Arduino and Python
+        <img src="Figures/block.png" width="500px"></img>
     </div><br/>
 
 <h2>Materials Needed</h2>
