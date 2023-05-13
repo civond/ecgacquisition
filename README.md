@@ -65,7 +65,6 @@ As illustrated in block diagram below, in the Arduino component of our software 
 <h2>Contributors</h2>
 <ul>
     <li>Nanzhong Deng</li>
-    <li>Neil Sequeira</li>
     <li>Lokesh Sharma</li>
     <li>Dorian Yeh</li>
 </ul>
