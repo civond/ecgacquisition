@@ -2,10 +2,19 @@
 
 <h2>Overview</h2>
     <div width="100">
-        In this project, we developed an open-source, low-cost realtime ECG monitoring solution using the AD8232 ECG module by Sparkfun and ESP32 chip using Arduino and Python
-        <img src="Figures/block.png" width="500px"></img>
+        In this project, we developed an open-source, low-cost realtime ECG monitoring solution using the AD8232 ECG module by Sparkfun and ESP32 chip using Arduino and Python. 
     </div><br/>
+<h2>Code</h2>
+<div>
+    To enable ECG data collection using our hardware implementation from any individual, an Arduino script must first be uploaded to the ESP32 module. Since the default Arduino IDE that we used to accomplish this lacks the ability to store data directly, our next step was adding data storage functionality using external hardware components or third-party software. Additionally, we wished to implement real-time monitoring functionality into our system to increase the applicability of our system to a health-care-oriented scenario. Real-time visualization of an ECG signal can immediately detect cardiac abnormalities such as arrhythmias and allow healthcare professionals to provide diagnoses and respond accordingly quickly. </br>
+    
+We used a Python script to run simultaneously with the Arduino script to accomplish the data storage and visualization tasks for our software implementation. The rationale for this is that Python is a readily accessible open-source programming language and has several powerful packages that can be utilized to perform real-time visualization, such as Matplotlib, which fits into our overarching goal of creating an efficient cost-effective real-time ECG monitoring solution. </br>
 
+As illustrated in block diagram below, in the Arduino component of our software implementation, once uploaded, the script will begin to check whether the LO+/LO- pins are connected properly. In other words, this means that the script checks whether the ECG leads are connected. If they are, the script will begin printing analog values to the Arduino serial monitor; if not, an error message will be printed instead. Once run, the Python component continuously reads the output of the Arduino serial monitor. The serial monitor output is decoded using UTF-8 and converted to an integer stored in a list. The most recent 100 points of this list are then graphed in real-time by using Matplotlib’s animation base class. Once the KeyboardInterupt is performed in the Python script, the graphing ceases, and the collected data is stored in a .csv file, which can be used for additional data processing.
+<div align="center">
+    <img src="Figures/block.png" width="600px"></img>
+</div>
+</div>
 <h2>Materials Needed</h2>
 <ul>
     <li>Sparkfun AD8232 ECG Module</li>
